@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOPDemo
+﻿namespace OOPDemo
 {
     public class Player
     {
@@ -19,12 +12,27 @@ namespace OOPDemo
             }
             set
             {
-                _name = value.ToUpper();
+                _name = value;
             }
         }
         
         public int Level { get; set; }
 
         public bool Alive { get; set; }
+
+        public void PrintName(List<string> apa)
+        {
+        }
+
+        public void PrintName(string name)
+        {
+
+            Console.WriteLine(Name);
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Level: {Level}, Alive: {Alive}";
+        }
     }
 }
